@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0"/>
+  <title>Recommendation System</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="./static/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+
+<body>
+  <nav class="light-blue lighten-1" role="navigation">
+    <div class="nav-wrapper container"><a id="logo-container" href="#" class="brand-logo">Crop Recommendation Portal</a>
+    </div>
+  </nav>
+
+
+  <div class="section no-pad-bot" id="index-banner">
+    <div class="container">
+      <h1 class="header center orange-text">Crop Recommendation System</h1>
+      <div class="row center">
+        <h5 class="header col s12 light">Please input the details of the farmland and climate
+        <br>
+        </h5>
+      </div>
+
+              <div class="row">
+    <form action='/predict' method="post" class="col s12">
+      <div class="row">
+        <div class="input-field col s4">
+            <label for="first_name"><b>'N'</b></label>
+            <br>
+          <input placeholder="N" name='N' id='first_name' type="text" class="validate">
+        </div>
+        <div class="input-field col s4">
+
+          <label for="sec_name"><b>P </b></label>
+            <br>
+          <input id="sec_name" name="P" placeholder="P"  type="text" class="validate">
+
+        </div>
+
+        <div class="input-field col s4">
+            <label for="thrd_name"><b>K</b></label>
+            <br>
+          <input id="thrd_name" name="K" placeholder="K" type="text" class="validate">
+
+        </div>
+        <div class="input-field col s4">
+          <label for="temperature"><b>temperature</b></label>
+          <br>
+        <input id="temperature" name="temperature" placeholder="temperature" type="text" class="validate">
+
+      </div>
+      <div class="input-field col s4">
+        <label for="humidity"><b>humidity</b></label>
+        <br>
+      <input id="humidity" name="humidity" placeholder="humidity" type="text" class="validate">
+
+    </div>
+    <div class="input-field col s4">
+      <label for="ph"><b>ph</b></label>
+      <br>
+      <input id="ph" name="ph" placeholder="ph" type="text" class="validate">
+    </div>
+    <div class="input-field col s4">
+      <label for="rainfall"><b>rainfall</b></label>
+      <br>
+      <input id="rainfall" name="rainfall" placeholder="rainfall" type="text" class="validate">
+    </div>
+      </div>
+
+      <div class="row center">
+
+          <button type="submit" class="btn-large waves-effect waves-light orange">Predict</button>
+      </div>
+    </form>
+      </div>
+
+      <br>
+      <h2 class="header center orange-text">{{pred}}</h2>
+        <br>
+<img src={{url}} class="c">
+    </div>
+  </div>
+
+
+
+  </body>
+ <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <!--<script src=".js/materialize.js"></script>
+  <script src="js/init.js"></script>-->
+</html>
