@@ -7,6 +7,7 @@ confuse==1.6.0
 cycler==0.11.0
 docopt==0.6.2
 Flask==2.0.2
+gunicorn==20.0.4
 htmlmin==0.1.12
 idna==3.3
 itsdangerous==2.0.1
